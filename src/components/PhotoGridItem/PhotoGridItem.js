@@ -51,7 +51,6 @@ const Image = styled.img`
 
 const Tags = styled.ul`
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
 `;
 
@@ -60,7 +59,12 @@ const Tag = styled.li`
   background: var(--color-gray-300);
   font-size: 0.875rem;
   font-weight: 475;
+  white-space: nowrap;
   color: var(--color-gray-800);
+  &:last-of-type {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export default PhotoGridItem;
